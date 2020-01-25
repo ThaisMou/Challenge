@@ -1,0 +1,3 @@
+C:\Challenge\Session2\obj\Debug\netcoreapp3.1\Session2.csprojAssemblyReference.cache
+C:\Challenge\Session2\obj\Debug\netcoreapp3.1\Session2.AssemblyInfoInputs.cache
+C:\Challenge\Session2\obj\Debug\netcoreapp3.1\Session2.AssemblyInfo.cs

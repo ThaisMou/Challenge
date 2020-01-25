@@ -1,0 +1,11 @@
+C:\Challenge\Session1F\bin\Debug\netcoreapp3.1\Session1F.exe
+C:\Challenge\Session1F\bin\Debug\netcoreapp3.1\Session1F.deps.json
+C:\Challenge\Session1F\bin\Debug\netcoreapp3.1\Session1F.runtimeconfig.json
+C:\Challenge\Session1F\bin\Debug\netcoreapp3.1\Session1F.runtimeconfig.dev.json
+C:\Challenge\Session1F\bin\Debug\netcoreapp3.1\Session1F.dll
+C:\Challenge\Session1F\bin\Debug\netcoreapp3.1\Session1F.pdb
+C:\Challenge\Session1F\obj\Debug\netcoreapp3.1\Session1F.csprojAssemblyReference.cache
+C:\Challenge\Session1F\obj\Debug\netcoreapp3.1\Session1F.AssemblyInfoInputs.cache
+C:\Challenge\Session1F\obj\Debug\netcoreapp3.1\Session1F.AssemblyInfo.cs
+C:\Challenge\Session1F\obj\Debug\netcoreapp3.1\Session1F.dll
+C:\Challenge\Session1F\obj\Debug\netcoreapp3.1\Session1F.pdb
