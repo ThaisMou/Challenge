@@ -96,12 +96,6 @@ C:\Challenge\Session2\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.TestPlatform.Cro
 C:\Challenge\Session2\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
 C:\Challenge\Session2\obj\Debug\netcoreapp3.1\Session2.csproj.CopyComplete
 C:\Challenge\Session2\bin\Debug\netcoreapp3.1\nunit.framework.dll
-C:\Challenge\Session2\bin\Debug\netcoreapp3.1\NUnit3.TestAdapter.dll
-C:\Challenge\Session2\bin\Debug\netcoreapp3.1\NUnit3.TestAdapter.pdb
-C:\Challenge\Session2\bin\Debug\netcoreapp3.1\nunit.engine.dll
-C:\Challenge\Session2\bin\Debug\netcoreapp3.1\nunit.engine.api.dll
-C:\Challenge\Session2\bin\Debug\netcoreapp3.1\Microsoft.DotNet.InternalAbstractions.dll
-C:\Challenge\Session2\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
 C:\Challenge\Session2\bin\Debug\netcoreapp3.1\TechTalk.SpecFlow.NUnit.SpecFlowPlugin.dll
 C:\Challenge\Session2\bin\Debug\netcoreapp3.1\BoDi.dll
 C:\Challenge\Session2\bin\Debug\netcoreapp3.1\Cucumber.Messages.dll
@@ -113,3 +107,11 @@ C:\Challenge\Session2\bin\Debug\netcoreapp3.1\System.Security.Cryptography.Prote
 C:\Challenge\Session2\bin\Debug\netcoreapp3.1\System.Security.Permissions.dll
 C:\Challenge\Session2\bin\Debug\netcoreapp3.1\Utf8Json.dll
 C:\Challenge\Session2\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Challenge\Session2\bin\Debug\netcoreapp3.1\Session2.deps.json
+C:\Challenge\Session2\bin\Debug\netcoreapp3.1\Session2.runtimeconfig.json
+C:\Challenge\Session2\bin\Debug\netcoreapp3.1\Session2.runtimeconfig.dev.json
+C:\Challenge\Session2\bin\Debug\netcoreapp3.1\Session2.dll
+C:\Challenge\Session2\bin\Debug\netcoreapp3.1\Session2.pdb
+C:\Challenge\Session2\bin\Debug\netcoreapp3.1\WebDriver.Support.dll
+C:\Challenge\Session2\obj\Debug\netcoreapp3.1\Session2.dll
+C:\Challenge\Session2\obj\Debug\netcoreapp3.1\Session2.pdb

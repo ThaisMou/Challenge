@@ -7221,7 +7221,7 @@
       "Microsoft.NET.Test.Sdk >= 16.2.0",
       "Selenium.WebDriver >= 3.141.0",
       "coverlet.collector >= 1.0.1",
-      "selenium.support",
+      "selenium.support >= 3.141.0",
       "specflow.nunit >= 3.1.78",
       "xunit >= 2.4.0",
       "xunit.runner.visualstudio >= 2.4.0"
@@ -7282,7 +7282,7 @@
           },
           "selenium.support": {
             "target": "Package",
-            "version": "(, )"
+            "version": "[3.141.0, )"
           },
           "specflow.nunit": {
             "target": "Package",

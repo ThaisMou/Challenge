@@ -56,7 +56,7 @@
             },
             "selenium.support": {
               "target": "Package",
-              "version": "(, )"
+              "version": "[3.141.0, )"
             },
             "specflow.nunit": {
               "target": "Package",

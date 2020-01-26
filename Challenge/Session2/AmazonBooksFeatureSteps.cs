@@ -17,7 +17,7 @@ namespace Session2
             this.Browser = new ChromeDriver();
         }
 
-        public string CheapestBook { get; set; }
+        public string CheapestBookTitle { get; set; }
 
         [Given(@"I navigate to ""(.*)""\.")]
         public void GivenINavigateTo_(string site)
@@ -46,10 +46,10 @@ namespace Session2
         }
 
         [Then(@"I select the cheapest book of the page without using any sorting method available\.")]
-        public void ThenISelectTheCheapestBookOfThePageWithoutUsingAnySortingMethodAvailable_()
+        public void ThenISelectTheCheapestBookOfThePageWithoutUsingAnySortingMethodAvailable_(string CheapestBookTitle)
         {
             IWebElement CheapestBook = Browser.FindElement(By.XPath("*[@id='search']/div[1]/div[2]/div/span[4]/div[1]/div[13]/div/span/div/div/div[2]/div[2]/div/div[1]/div/div/div[1]/h2/a/span"));
-            CheapestBook.GetText();
+            CheapestBookTitle = CheapestBook.Text;
             CheapestBook.Click();
         }
 
@@ -57,8 +57,8 @@ namespace Session2
         public void WhenIReachTheDetailedBookPageICheckIfTheNameInTheHeaderIsTheSameNameOfTheBookThatISelectPreviously_(string bookTitleString)
         {        
             IWebElement bookTitle = Browser.FindElement(By.Id("ebooksProductTitle"));
-            bookTitleString = bookTitle.GetText();
-            CheapestBook.Equals(bookTitleString);
+            bookTitleString = bookTitle.Text;
+            CheapestBookTitle.Equals(bookTitleString);
         }
 
         [AfterScenario]
