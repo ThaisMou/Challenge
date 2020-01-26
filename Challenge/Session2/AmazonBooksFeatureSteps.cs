@@ -1,59 +1,72 @@
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Support.UI;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using Xunit;
-using Microsoft.Extensions.Configuration;
-using SpecFlow.Tools.MsBuild.Generation;
+using TechTalk.SpecFlow;
 
 namespace Session2
 {
-[Binding]
-public class AmazonBooksFeatureSteps :IDisposable
-{
-    var cheapestBook = chromeDriver.FindElementByXPath("*[@id='search']/div[1]/div[2]/div/span[4]/div[1]/div[13]/div/span/div/div/div[2]/div[2]/div/div[1]/div/div/div[1]/h2/a/span");
+    [Binding]
+    public class AmazonBooksFeatureSteps
+    {
+        IWebDriver Browser;
+
+        [BeforeScenario]
+        public void Init()
+        {
+            this.Browser = new ChromeDriver();
+        }
+
+        public string CheapestBook { get; set; }
+
+        [Given(@"I navigate to ""(.*)""\.")]
+        public void GivenINavigateTo_(string site)
+        {
+            site = "https://www.amazon.com";
+            Browser.Navigate().GoToUrl(site);
+            Browser.Title.Contains("Amazon");
+        }
         
-    private ChromeDriver chromeDriver;
-    public AmazonBooksFeatureSteps() => chromeDriver = new ChromeDriver();
+        [When(@"I select the option ""(.*)"" in the dropdown next to the search text input criteria\.")]
+        public void WhenISelectTheOptionInTheDropdownNextToTheSearchTextInputCriteria_(string dropDownOption)
+        {
+            dropDownOption = ("Books");
+            SelectElement searchDropdownBox = new SelectElement(Browser.FindElement(By.Id("searchDropdownBox")));
+            searchDropdownBox.SelectByText(dropDownOption);
+        }
+        
+        [Then(@"I search for ""(.*)""\.")]
+        public void ThenISearchFor_(string searchKeyword)
+        {
+            searchKeyword = "Test automation";
+            IWebElement searchInputBox = Browser.FindElement(By.Id("twotabsearchtextbox"));
+            searchInputBox.SendKeys(searchKeyword);
+            IWebElement searchButton = Browser.FindElement(By.Id("nav-search-submit-text"));
+            searchButton.Click();
+        }
 
-    [When(@"I select the option “Books” in the dropdown next to the search text input criteria.")]
-    public void WhenISelectTheOptionBooksInTheDropDownNextToTheSearchTextInputCriteria()
-    {
-        var searchDropdownBox = chromeDriver.FindElementById("searchDropdownBox");
-        searchDropdownBox.Select("Books");
+        [Then(@"I select the cheapest book of the page without using any sorting method available\.")]
+        public void ThenISelectTheCheapestBookOfThePageWithoutUsingAnySortingMethodAvailable_()
+        {
+            IWebElement CheapestBook = Browser.FindElement(By.XPath("*[@id='search']/div[1]/div[2]/div/span[4]/div[1]/div[13]/div/span/div/div/div[2]/div[2]/div/div[1]/div/div/div[1]/h2/a/span"));
+            CheapestBook.GetText();
+            CheapestBook.Click();
+        }
+
+        [When(@"I reach the detailed book page, I check if the name in the header is the same name of the book that I select previously\.")]
+        public void WhenIReachTheDetailedBookPageICheckIfTheNameInTheHeaderIsTheSameNameOfTheBookThatISelectPreviously_(string bookTitleString)
+        {        
+            IWebElement bookTitle = Browser.FindElement(By.Id("ebooksProductTitle"));
+            bookTitleString = bookTitle.GetText();
+            CheapestBook.Equals(bookTitleString);
+        }
+
+        [AfterScenario]
+        public void Close()
+        {
+            this.Browser.Close();
+            this.Browser.Dispose();
+
+        }
     }
-
-    [Given(@"I navigate to “www.amazon.com”.")]
-    public void GivenINavigateToWwwAmazonCom()
-    {
-        chromeDriver.Navigate().GoToUrl("https://www.amazon.com");
-        Assert.IsTrue(chromeDriver.Title.ToLower().Contains("Amazon"));
-    }
-
-    [Then(@"I search for “Test automation”.")]
-    public void ThenISearchForTestAutomation()
-    {
-     var searchInputBox = chromeDriver.FindElementById("twotabsearchtextbox");
-     searchInputBox.SendKeys("Test automation");
-     var searchButton = chromeDriver.FindElementById("nav-search-submit-text");
-     searchButton.Click();     
-    }
-
-    [Then(@"I select the cheapest book of the page without using any sorting method available.")]
-    public void ThenISelectTheCheapestBookOfThePageWithoutUsingAnySortingMethodAvailable()
-    {
-        var wait = new WebDriverWait(chromeDriver, TimeSpan.FromSecond(5));
-        wait.Until(ExpectedConditions.ElementIsVisible(cheapestBook));
-        cheapestBook.GetText();
-        cheapestBook.Click();
-    }
-
-    [ When(@"I reach the detailed book page, I check if the name in the header is the same name of the book that I select previously.")]
-    public void  WhenIReachTheDetailedBookPageICheckIfTheNameInTheHeaderIsTheSameNameOfTheBookThatISelectPreviously()
-    {
-        var bookTitle = chromeDriver.FindElementById("ebooksProductTitle");
-        bookTitle.GetText();
-        Assert.Equal(expected.cheapestBook, actual.bookTitle);
-    }
-
- }
 }
