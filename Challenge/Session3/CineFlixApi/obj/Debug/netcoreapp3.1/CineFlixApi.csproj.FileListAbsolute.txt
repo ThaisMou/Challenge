@@ -1,0 +1,6 @@
+C:\Users\tmoura\Downloads\Challenge-master\Challenge-master\Challenge\Session3\CineFlixApi\obj\Debug\netcoreapp3.1\CineFlixApi.csprojAssemblyReference.cache
+C:\Users\tmoura\Downloads\Challenge-master\Challenge-master\Challenge\Session3\CineFlixApi\obj\Debug\netcoreapp3.1\staticwebassets\CineFlixApi.StaticWebAssets.Manifest.cache
+C:\Users\tmoura\Downloads\Challenge-master\Challenge-master\Challenge\Session3\CineFlixApi\obj\Debug\netcoreapp3.1\staticwebassets\CineFlixApi.StaticWebAssets.xml
+C:\Users\tmoura\Downloads\Challenge-master\Challenge-master\Challenge\Session3\CineFlixApi\obj\Debug\netcoreapp3.1\CineFlixApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\tmoura\Downloads\Challenge-master\Challenge-master\Challenge\Session3\CineFlixApi\obj\Debug\netcoreapp3.1\CineFlixApi.AssemblyInfoInputs.cache
+C:\Users\tmoura\Downloads\Challenge-master\Challenge-master\Challenge\Session3\CineFlixApi\obj\Debug\netcoreapp3.1\CineFlixApi.AssemblyInfo.cs
