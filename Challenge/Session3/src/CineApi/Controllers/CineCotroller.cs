@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CineApi.Controllers
+namespace CineApi.Controllers : ApiController
 {
     [Produces("application/json")]
     [Route("api/Usuarios")]
