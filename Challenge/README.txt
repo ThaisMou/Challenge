@@ -1,12 +1,14 @@
 -------------------------------------------------------------------
 Hello, Welcome!
 
-I would like to say thank you for oppurtunity to challenge my some to create and learning something new.
+I would like to say thank you for oppurtunity to challenge myself to create and learning something new.
 
 In this Folder you will find more 5 others folders:
+
  - The folders 'Session1F and Session1S' refers to the Programming Logic challenge:
   *Session1F - It means "Session 1 First" that refers to [#1] Step one.
   *Session2S - It means "Session 1 Second" that refers to [#2] Step two.
+  
  - The Folder 'Session2' refers to Test Automation challenge.
 [ About this one i have to say that i could not run the test because i had problems with VS code and  Visual Studio. I think that some package is missing but i could not indentify which.]
 
